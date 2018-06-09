@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>FCC Weather App</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+</head>
+
+<body>
+    <main>
+        <div id="outerWrapper" class="container-fluid">
+            <div id="innerWrapper" class="container">
+                <h1 class="text-center">FreeCodeCamp Weather App</h1>
+                <div class="text-center" id="infoDiv">
+                    <p>City: <span id="name"></span></p>
+                    <div><img id="weatherIcon" src="http://openweathermap.org/img/w/02d.png" alt="Icon representing weather condition" /></div>
+                    <p>Description: <span id="description"></span></p>
+                    <p>Temp: <span id="temp"></span> <button id="convBtn" class="btn btn-primary animated" title="Convert to degrees celcius"><span id="btnText">Convert to C&deg</span></button></p>
+                    <p>Wind: <span id="windDir"></span> <span id="windSpeed"></span></p>
+                </div>
+                <form name="getWeather" id="getForm">
+                    <div class="input-group"> <input id="userInput" name="zipCode" type="text" pattern="[0-9]{5}" class="form-control" placeholder="Enter 5-Digit US ZIP Code" /> <span class="input-group-btn"><button id="submitBtn" class="btn btn-primary" type="button" action="submit">Get Weather</button></span>                        </div>
+                </form>
+            </div>
+        </div>
+        <div id="errorWrapper" class="container-fluid">
+            <div class="container">
+                <div class="col-md-12 errorText text-center"> <span class="glyphicon glyphicon-remove-circle"></span>
+                    <h2 class="text-danger">Something went wrong! <small class="text-warning">Please check your internet connection.</small></h2> </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="js/compressed.js"></script>
+
+</html>
